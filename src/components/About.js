@@ -1,6 +1,6 @@
 import React from "react";
 
-function About(blogData) {
+function About({blogData}) {
     return (
         <aside>
             <img src={ blogData.image } alt="blog logo" />

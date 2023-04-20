@@ -1,20 +1,19 @@
+import { render } from "@testing-library/react";
 import React from "react";
 
-function Article({blogData}) {
-    const posts = blogData.posts
+function Article(props) {
+    const title = props.title
+    const date = props.date
+    const preview = props.preview
 
-    const articleItems = posts.map(post => {
-        return (
-        <article>
-            <h3> {post.title} </h3>
-            <small> {post.date} </small>
-            <p> {post.preview} </p>
-        </article>
-
-        )
-    })
     return (
-        <div> {articleItems} </div>
+        <div>
+            <article>
+                <h3> {title} </h3>
+                <small> {date} </small>
+                <p> {preview} </p>
+            </article> 
+        </div>
     )
 }
 

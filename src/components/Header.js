@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(blogData) {
+function Header({blogData}) {
     return (
         <h1>{blogData.name}</h1>
     )
